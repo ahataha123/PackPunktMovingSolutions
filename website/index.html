@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="assets/img/PackPunkt.jpeg">
+  <title>PackPunkt Moving Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav">
+    <div class="nav-inner">
+
+      <!-- BRAND -->
+      <div class="brand">
+        <img
+          src="assets/img/PackPunkt.jpeg"
+          alt="PackPunkt Moving Solutions Logo"
+          class="brand-logo"
+        />
+        <span class="brand-text">PackPunkt Umzug</span>
+      </div>
+
+      <!-- MENU -->
+      <nav class="menu">
+        <a href="#">Kontakt</a>
+        <a href="#">Impressum</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero-layout">
+
+    <!-- LEFT: CONTENT -->
+    <div class="hero-content container">
+      <h1>Gratis Angebot für Ihren Umzug in Wien</h1>
+      <p class="subline">Schnell · Unverbindlich · Persönlich</p>
+
+      <!-- OFFER FORM -->
+      <form id="offer-form">
+        <input type="text" name="from" placeholder="Umzug von (Adresse)" required />
+        <input type="text" name="to" placeholder="Umzug nach (Adresse)" required />
+        <button type="submit">Jetzt unverbindlich anfragen →</button>
+      </form>
+
+      <!-- VISIT -->
+<button
+  class="visit-btn"
+  data-cal-link="taha-imran-zkkxbc/30min"
+  data-cal-namespace="30min"
+  data-cal-config='{"layout":"month_view"}'
+>
+  Besichtigung vereinbaren →
+</button>
+
+      <!-- QUICK INFO -->
+      <section class="steps">
+        <div>
+          <strong>⏱ 30 Minuten</strong>
+          <span>Kurzbesichtigung</span>
+        </div>
+        <div>
+          <strong>📍 Kundenadresse</strong>
+          <span>Vor-Ort Einschätzung</span>
+        </div>
+        <div>
+          <strong>📦 Optimales Angebot</strong>
+          <span>Transparente Planung</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT: HERO IMAGE -->
+    <div class="hero-visual">
+      <img
+        src="assets/img/hero.jpg"
+        alt="Professioneller Umzug in Wien"
+        loading="lazy"
+      />
+    </div>
+
+  </main>
+<!-- CALENDAR MODAL -->
+<div class="calendar-modal" id="calendar-modal">
+  <div class="calendar-backdrop"></div>
+
+  <div class="calendar-box">
+    <button class="calendar-close" id="close-calendar">✕</button>
+
+    <!-- THIS IS REQUIRED -->
+    <div id="cal-container" style="height:100%"></div>
+  </div>
+</div>
+
+
+  <!-- PROCESS -->
+  <section class="process">
+    <h2>Unser Ablauf in fünf Schritten</h2>
+    <p class="process-sub">
+      Klar, transparent und bewährt – von der Anfrage bis zur Zufriedenheit.
+    </p>
+
+    <!-- STEP CARDS -->
+    <div class="process-list">
+      <div class="process-card active" data-step="1">
+        <span class="step">1</span>
+        <h3>Erstgespräch</h3>
+        <p class="duration">15–30 Min</p>
+        <span class="tag">Kostenlos & unverbindlich</span>
+      </div>
+
+      <div class="process-card" data-step="2">
+        <span class="step">2</span>
+        <h3>Besichtigung (optional)</h3>
+        <p class="duration">30–45 Min</p>
+        <span class="tag">Termin nach Wunsch</span>
+      </div>
+
+      <div class="process-card" data-step="3">
+        <span class="step">3</span>
+        <h3>Individuelles Angebot</h3>
+        <p class="duration">ca. 60 Min</p>
+        <span class="tag">Transparente Preise</span>
+      </div>
+
+      <div class="process-card" data-step="4">
+        <span class="step">4</span>
+        <h3>Umzugsabwicklung</h3>
+        <p class="duration">4–8 Std</p>
+        <span class="tag">Am Wunschtermin</span>
+      </div>
+
+      <div class="process-card" data-step="5">
+        <span class="step">5</span>
+        <h3>Feedback</h3>
+        <p class="duration">10–15 Min</p>
+        <span class="tag">Ihre Zufriedenheit</span>
+      </div>
+    </div>
+
+    <!-- DETAIL PANEL -->
+    <div class="process-detail" id="process-detail">
+      <h3 id="detail-title">Schritt 1: Erstgespräch</h3>
+      <p id="detail-text">
+        Im Erstgespräch evaluieren wir den Umfang der abzuwickelnden Arbeiten
+        und besprechen Ihre Wünsche und Anforderungen, um die Grundlage für
+        ein individuelles Angebot zu schaffen.
+      </p>
+
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+      <p class="progress-text" id="progress-text">
+        Fortschritt: <strong>20%</strong> · Schritt 1 von 5
+      </p>
+    </div>
+  </section>
+<section class="cta">
+  <div class="cta-inner">
+    <h2>
+      Buchen Sie Ihren Besichtigungstermin<br />
+      oder rufen Sie uns direkt an.
+    </h2>
+
+    <div class="cta-actions">
+      <a
+        data-cal-link="taha-imran-zkkxbc/30min"
+        data-cal-namespace="30min"
+        data-cal-config='{"layout":"month_view"}'
+        target="_blank"
+        class="cta-primary"
+      >
+        Besichtigungstermin buchen
+      </a>
+
+      <a href="tel:+436781234567" class="cta-secondary">
+        Anrufen →
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- STICKY CONTACT -->
+  <div class="sticky-contact">
+    <a href="tel:+436781234567">📞 Anrufen</a>
+    <a href="https://wa.me/436781234567" target="_blank">💬 WhatsApp</a>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+<section class="reviews">
+  <div class="reviews-inner">
+    <h2>Was unsere Kunden sagen</h2>
+
+    <div class="reviews-rating">
+  <div class="stars">★★★★★</div>
+
+  <div class="google-rating">
+    <span>4.9 von 5</span>
+
+    <!-- GOOGLE LOGO (SVG) -->
+    <svg class="google-logo" viewBox="0 0 533.5 544.3" aria-hidden="true">
+      <path fill="#4285F4" d="M533.5 278.4c0-17.4-1.6-34.1-4.6-50.4H272v95.4h146.9c-6.3 34.1-25 63-53.3 82.4v68h86.1c50.4-46.4 81.8-114.8 81.8-195.4z"/>
+      <path fill="#34A853" d="M272 544.3c72.6 0 133.5-24.1 178-65.5l-86.1-68c-23.9 16.1-54.5 25.6-91.9 25.6-70.6 0-130.4-47.7-151.8-111.6h-89v69.9c44.2 87.9 135.4 149.6 240.9 149.6z"/>
+      <path fill="#FBBC05" d="M120.2 324.8c-10.4-31-10.4-64.5 0-95.5v-69.9h-89c-38.6 76.9-38.6 167.4 0 244.3l89-69z"/>
+      <path fill="#EA4335" d="M272 107.7c39.5-.6 77.6 14 106.6 40.9l79.3-79.3C406.4 24.3 344.6-1.2 272 0 166.5 0 75.3 61.7 31.1 149.6l89 69.9C141.6 155.4 201.4 107.7 272 107.7z"/>
+    </svg>
+  </div>
+</div>
+
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>
+          „Sehr professionell, pünktlich und freundlich. 
+          Der Umzug lief absolut stressfrei.“
+        </p>
+        <strong>– Markus H., Wien</strong>
+      </div>
+
+      <div class="review-card">
+        <p>
+          „Top Service! Schnelle Besichtigung, faires Angebot 
+          und perfekte Abwicklung.“
+        </p>
+        <strong>– Anna S., Wien</strong>
+      </div>
+
+      <div class="review-card">
+        <p>
+          „Alles wie versprochen. Besonders die Kommunikation 
+          war hervorragend.“
+        </p>
+        <strong>– David K., Niederösterreich</strong>
+      </div>
+    </div>
+
+    <p class="reviews-note">
+      * Beispielhafte Kundenstimmen – echte Bewertungen folgen
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      © 2026 PackPunkt Moving Solutions
+    </div>
+
+    <div class="footer-right">
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="tel:+436781234567">+43 678 1234567</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function (C, A, L) {
+  let p = function (a, ar) { a.q.push(ar); };
+  let d = C.document;
+  C.Cal = C.Cal || function () {
+    let cal = C.Cal;
+    let ar = arguments;
+    if (!cal.loaded) {
+      cal.ns = {};
+      cal.q = cal.q || [];
+      d.head.appendChild(d.createElement("script")).src = A;
+      cal.loaded = true;
+    }
+    if (ar[0] === L) {
+      const api = function () { p(api, arguments); };
+      const namespace = ar[1];
+      api.q = api.q || [];
+      typeof namespace === "string"
+        ? (cal.ns[namespace] = api)
+        : p(cal, ar);
+      return;
+    }
+    p(cal, ar);
+  };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", "30min", { origin: "https://app.cal.com" });
+Cal.ns["30min"]("ui", {
+  layout: "month_view",
+  hideEventTypeDetails: false
+});
+</script>
+
+
+</body>
+</html>
