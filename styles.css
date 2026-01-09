@@ -3,10 +3,45 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* FORCE LIGHT MODE – DISABLE SYSTEM DARK MODE */
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+
 body {
   margin: 0;
   background: #f8f9fb;
   color: #111;
+}
+/* =====================
+   HERO CAROUSEL
+===================== */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-img.active {
+  opacity: 1;
 }
 
 /* =====================
@@ -51,7 +86,7 @@ button {
   padding: 16px;
   font-size: 16px;
   font-weight: 600;
-  background: #4bcdde;
+  background: black;
   color: white;
   border: none;
   border-radius: 8px;
@@ -69,7 +104,7 @@ button:hover {
   border: 2px solid #ffffff;   /* ⬅️ STRONGER BORDER */
   border-radius: 14px;         /* ⬅️ MODERN ROUNDING */
   text-decoration: none;
-  color: #4bcdde;
+  color: black;
   font-weight: 700;
   font-size: 17px;
   background: transparent;
@@ -201,6 +236,7 @@ button:hover {
   font-size: 18px;
   font-weight: 600;
   white-space: nowrap;
+  color: black;
 }
 
 .menu {
@@ -209,7 +245,7 @@ button:hover {
 }
 
 .menu a {
-  color: #4bcdde;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   font-size: 17px;
@@ -396,7 +432,7 @@ button:hover {
 }
 
 .cta-primary {
-  background: #4bcdde;
+  background: black;
   color: white;
   padding: 14px 22px;
   border-radius: 10px;
@@ -661,5 +697,52 @@ button:hover {
     margin: 0 auto 32px;
   }
 }
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #ffffff !important;
+    color: #111111 !important;
+  }
 
+  * {
+    background-color: inherit !important;
+    color: inherit !important;
+  }
+}
+
+.process-card {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #e5e7eb;
+}
+
+.process-card h3,
+.process-card p,
+.process-card span {
+  color: #111111 !important;
+}
+
+
+button,
+.visit-btn,
+.cta-primary {
+  background-color: black !important;
+  color: #ffffff !important;
+}
+
+.cta-secondary {
+  background-color: white!important;
+  color: black !important;
+}
+.visit-btn {
+  background-color: #ffffff !important;
+  color: black !important;
+  border: 2px solid white !important;
+}
+
+input {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #ddd !important;
+}
 }

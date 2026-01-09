@@ -64,3 +64,12 @@ document.querySelectorAll(".process-card").forEach(card => {
       `Fortschritt: <strong>${data.progress}%</strong> · Schritt ${step} von 5`;
   });
 });
+// HERO IMAGE CAROUSEL
+const slides = document.querySelectorAll(".carousel-img");
+let currentSlide = 0;
+
+setInterval(() => {
+  slides[currentSlide].classList.remove("active");
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add("active");
+}, 2500); // change every 3.5s
