@@ -74,90 +74,54 @@ setInterval(() => {
   slides[currentSlide].classList.add("active");
 }, 2500); // change every 3.5s
 
-  function handleMobileHeroLogo() {
-    const logoWrapper = document.getElementById("heroMiddle");
-    if (!logoWrapper) return;
-
-    const viewportWidth = window.visualViewport
-      ? window.visualViewport.width
-      : window.innerWidth;
-
-    const isTouchDevice =
-      window.matchMedia("(hover: none)").matches &&
-      window.matchMedia("(pointer: coarse)").matches;
-
-    const isMobile = isTouchDevice && viewportWidth < 768;
-
-    if (isMobile) {
-      // SHOW + CENTER
-      logoWrapper.style.display = "flex";
-      logoWrapper.style.justifyContent = "center";
-      logoWrapper.style.alignItems = "center";
-      logoWrapper.style.margin = "24px auto";
-
-      // RESPONSIVE IMAGE SIZE
-      const img = logoWrapper.querySelector("img");
-      if (img) {
-        img.style.width = Math.min(viewportWidth * 0.75, 320) + "px";
-        img.style.height = "auto";
-      }
-    } else {
-      // HIDE ON DESKTOP / TABLET / LARGE SCREENS
-      logoWrapper.style.display = "none";
-    }
-  }
-
-  // Run once
-  handleMobileHeroLogo();
-
-  // Run on resize + orientation change
-  window.addEventListener("resize", handleMobileHeroLogo);
-  window.addEventListener("orientationchange", handleMobileHeroLogo);
 
 (function () {
-  function forceLightMode() {
-    const isForcedDark =
-      window.matchMedia('(prefers-color-scheme: dark)').matches &&
-      document.documentElement.style.colorScheme !== 'light';
+  const wrapper = document.getElementById("heroMiddle");
+  const img = document.getElementById("heroMiddleImg");
 
-    if (!isForcedDark) return;
+  if (!wrapper || !img) return;
 
-    let style = document.getElementById('force-light-style');
-    if (!style) {
-      style = document.createElement('style');
-      style.id = 'force-light-style';
-      style.innerHTML = `
-        html, body {
-          background: #ffffff !important;
-          color: #111111 !important;
-          color-scheme: light !important;
-        }
+  function updateHeroLogo() {
+    const width = window.innerWidth;
 
-        * {
-          background-color: inherit !important;
-          color: inherit !important;
-          box-shadow: none !important;
-          filter: none !important;
-        }
+    // REAL mobile layout range
+    const isMobileLayout = width <= 820;
 
-        img, svg, video {
-          filter: none !important;
-        }
-      `;
-      document.head.appendChild(style);
+    if (isMobileLayout) {
+      wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.margin = "24px auto";
+
+      img.style.width = Math.min(width * 0.7, 320) + "px";
+      img.style.height = "auto";
+    } else {
+      wrapper.style.display = "none";
     }
   }
 
-  // Run on load
-  forceLightMode();
+  // Initial run
+  updateHeroLogo();
 
-  // Re-apply if Chrome tries again
-  setTimeout(forceLightMode, 300);
-  setTimeout(forceLightMode, 1000);
-
-  // Re-apply on resize or tab switch
-  window.addEventListener('resize', forceLightMode);
-  document.addEventListener('visibilitychange', forceLightMode);
+  // Keep in sync
+  window.addEventListener("resize", updateHeroLogo);
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.getElementById("heroMiddle");
+
+  if (!wrapper) return;
+
+  function updateHeroMiddle() {
+    if (window.innerWidth <= 820) {
+      wrapper.style.display = "flex";
+    } else {
+      wrapper.style.display = "none";
+    }
+  }
+
+  updateHeroMiddle();
+  window.addEventListener("resize", updateHeroMiddle);
+});
+
 
 

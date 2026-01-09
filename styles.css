@@ -23,6 +23,20 @@ body {
 /* =====================
    HERO CAROUSEL
 ===================== */
+/* HERO MIDDLE (mobile logo block) */
+.hero-middle-wrapper {
+  width: 100%;
+  display: none;            /* JS controls visibility */
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.hero-middle-image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
 
 .carousel {
   position: relative;
