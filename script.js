@@ -108,20 +108,27 @@ setInterval(() => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.getElementById("heroMiddle");
-
   if (!wrapper) return;
 
-  function updateHeroMiddle() {
-    if (window.innerWidth <= 820) {
+  const mq = window.matchMedia("(max-width: 768px)");
+
+  function updateHeroMiddle(e) {
+    if (e.matches) {
       wrapper.style.display = "flex";
+      wrapper.style.justifyContent = "center";
+      wrapper.style.margin = "24px auto";
     } else {
       wrapper.style.display = "none";
     }
   }
 
-  updateHeroMiddle();
-  window.addEventListener("resize", updateHeroMiddle);
+  // Initial run
+  updateHeroMiddle(mq);
+
+  // Listen for changes (rotate, resize, split screen)
+  mq.addEventListener("change", updateHeroMiddle);
 });
+
 
 
 
