@@ -8,6 +8,7 @@
 .hero-layout,
 .process-list,
 .process-detail,
+.company-description ,
 .cta-inner,
 .reviews-inner,
 .footer-inner {
@@ -74,6 +75,7 @@ body {
 /* =====================
    CONTAINER / CONTENT
 ===================== */
+
 
 .container {
   max-width: 520px;
@@ -827,6 +829,77 @@ input {
   }
 }
 
+/* === GRATIS-ANGEBOT VISUAL FRAME === */
+.hero-content.container {
+  background: #ffffff;
+  border: 1px solid #37393e;     /* subtle grey frame */
+  border-radius: 16px;
+  padding: 32px 24px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
 
+/* Make "Gratis-Angebot" neutral (not salesy) */
+.hero-content.container h1 {
+  color: #111;
+}
 
+.hero-content.container h1 span,
+.hero-content.container h1 strong {
+  color: #6b7280;               /* neutral grey if used */
+}
+
+/* =====================
+   COMPANY DESCRIPTION CARD
+===================== */
+
+.company-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 40px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* Headline inside card */
+.company-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #0b2c5f;
+}
+
+/* Text spacing inside card */
+.company-description p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0 0 16px 0;
+}
+
+/* =====================
+   MOBILE CARD ADJUSTMENTS
+===================== */
+@media (max-width: 768px) {
+  .company-inner {
+    padding: 20px 20px;
+    border-radius: 14px;
+  }
+
+  .company-description h2 {
+    font-size: 21px;
+  }
+
+  .company-description p {
+    font-size: 15px;
+  }
+}
+/* Make "Gratis" visually softer */
+.gratis {
+  color: #9ca3af;        /* neutral grey */
+  font-weight: 600;     /* slightly lighter than rest */
+}
 }
