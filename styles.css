@@ -108,7 +108,7 @@ button {
   padding: 16px;
   font-size: 16px;
   font-weight: 600;
-  background: #9ca3af;
+  background: #000000;
   color: white;
   border: none;
   border-radius: 8px;
@@ -126,10 +126,10 @@ button:hover {
   margin: 20px auto 0;
 
   padding: 18px 28px;
-  background: transparent;
+  background: #9ca3af;
 
-  color: #111;                     /* readable in light + forced dark */
-  border: 2px solid #9ca3af;        /* neutral grey */
+  color: #ffffff;                     /* readable in light + forced dark */
+  border:  #9ca3af;        /* neutral grey */
   border-radius: 8px;
 
   font-size: 16px;
@@ -143,7 +143,7 @@ button:hover {
 /* Hover / focus */
 .visit-btn:hover,
 .visit-btn:focus-visible {
-  background: #111;
+  background: #9ca3af;
   color: #fff;
   border-color: #111;
 }
@@ -423,7 +423,7 @@ button:hover {
 .hero-layout {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 48px 16px 80px;
+  padding: 5px 16px;
   display: grid;
   grid-template-columns: minmax(0, 530px) minmax(0, 1fr);
   gap: 48px;
@@ -485,12 +485,21 @@ button:hover {
   text-decoration: none;
 }
 
+.cta-secondary {
+  background: #9ca3af;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .cta-primary:hover {
   opacity: 0.9;
 }
 
 .cta-secondary {
-  color: #0b2c5f;
+  color: white;
   font-weight: 600;
   text-decoration: none;
 }
@@ -723,7 +732,7 @@ button:hover {
   @media (max-width: 900px) {
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 1px;
   }
 
   .hero-content {
@@ -756,8 +765,11 @@ button:hover {
   color: #111111 !important;
 }
 
-
-button,
+button
+{
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
 .visit-btn,
 .cta-primary {
   background-color: #9ca3af !important;
@@ -765,8 +777,8 @@ button,
 }
 
 .cta-secondary {
-  background-color: white!important;
-  color: rgb(101, 89, 89) !important;
+  background-color: #9ca3af!important;
+  color: white !important;
 }
 
 
@@ -829,7 +841,7 @@ input {
 }
 @media (max-width: 768px) {
   .hero-middle-wrapper {
-    padding-top: 15px;
+    padding-top: 1px;
   }
 
   .hero-middle-wrapper::before {
