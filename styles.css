@@ -17,22 +17,10 @@
   margin-right: auto;
 }
 
-/* FORCE LIGHT MODE – DISABLE SYSTEM DARK MODE */
-:root {
-  color-scheme: light;
-}
-
-html,
-body {
-  background-color: #ffffff !important;
-  color: #111111 !important;
-}
-
 
 body {
   margin: 0;
   background: #f8f9fb;
-  color: #111;
 }
 /* =====================
    HERO CAROUSEL
@@ -76,7 +64,10 @@ body {
    CONTAINER / CONTENT
 ===================== */
 
-
+.hero-content h1 .gratis {
+  color: #9ca3af;
+  font-weight: 600;
+}
 .container {
   max-width: 520px;
   margin: 0 auto;
@@ -115,7 +106,7 @@ button {
   padding: 16px;
   font-size: 16px;
   font-weight: 600;
-  background: black;
+  background: #9ca3af;
   color: white;
   border: none;
   border-radius: 8px;
@@ -129,14 +120,12 @@ button:hover {
 .visit-btn {
   display: block;
   margin: 28px auto;
-  padding: 20px 32px;          /* ⬅️ BIGGER */
-  border: 2px solid #ffffff;   /* ⬅️ STRONGER BORDER */
-  border-radius: 14px;         /* ⬅️ MODERN ROUNDING */
+  padding: 16px 110px;          /* ⬅️ BIGGER */
+  border: 1px solid rgb(101, 89, 89);   /* ⬅️ STRONGER BORDER */
+  border-radius: 8px;         /* ⬅️ MODERN ROUNDING */
   text-decoration: none;
-  color: black;
-  font-weight: 700;
-  font-size: 17px;
-  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -449,7 +438,7 @@ button:hover {
 .cta h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #0b2c5f;
+  color: black;
   margin: 0;
   line-height: 1.3;
 }
@@ -461,7 +450,7 @@ button:hover {
 }
 
 .cta-primary {
-  background: black;
+  background: #9ca3af;
   color: white;
   padding: 14px 22px;
   border-radius: 10px;
@@ -551,7 +540,7 @@ button:hover {
 .reviews h2 {
   font-size: 26px;
   margin-bottom: 12px;
-  color: #0b2c5f;
+  color: black;
 }
 
 .reviews-rating {
@@ -726,18 +715,7 @@ button:hover {
     margin: 0 auto 32px;
   }
 }
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: #ffffff !important;
-    color: #111111 !important;
-  }
 
-  * {
-    background-color: inherit !important;
-    color: inherit !important;
-  }
-}
 
 .process-card {
   background-color: #ffffff !important;
@@ -755,25 +733,29 @@ button:hover {
 button,
 .visit-btn,
 .cta-primary {
-  background-color: black !important;
+  background-color: #9ca3af !important;
   color: #ffffff !important;
 }
 
 .cta-secondary {
   background-color: white!important;
-  color: black !important;
+  color: rgb(101, 89, 89) !important;
 }
-.visit-btn {
-  background-color: #ffffff !important;
-  color: black !important;
-  border: 2px solid white !important;
-}
+
 
 input {
   background-color: #ffffff !important;
   color: #111111 !important;
   border: 1px solid #ddd !important;
 }
+.hero-content.container {
+  background: #ffffff;
+  border: 1px solid #37393e;     /* subtle grey frame */
+  border-radius: 16px;
+  padding: 32px 24px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
 
 /* =====================
    TOP HEADER ADJUSTMENT
@@ -829,24 +811,8 @@ input {
   }
 }
 
-/* === GRATIS-ANGEBOT VISUAL FRAME === */
-.hero-content.container {
-  background: #ffffff;
-  border: 1px solid #37393e;     /* subtle grey frame */
-  border-radius: 16px;
-  padding: 32px 24px 40px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-}
 
-/* Make "Gratis-Angebot" neutral (not salesy) */
-.hero-content.container h1 {
-  color: #111;
-}
 
-.hero-content.container h1 span,
-.hero-content.container h1 strong {
-  color: #6b7280;               /* neutral grey if used */
-}
 
 /* =====================
    COMPANY DESCRIPTION CARD
@@ -869,7 +835,7 @@ input {
   font-size: 26px;
   font-weight: 700;
   margin: 0 0 20px 0;
-  color: #0b2c5f;
+  color: #000000;
 }
 
 /* Text spacing inside card */
@@ -897,9 +863,6 @@ input {
     font-size: 15px;
   }
 }
-/* Make "Gratis" visually softer */
-.gratis {
-  color: #9ca3af;        /* neutral grey */
-  font-weight: 600;     /* slightly lighter than rest */
-}
+
+
 }
