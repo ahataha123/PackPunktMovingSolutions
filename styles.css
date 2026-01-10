@@ -4,7 +4,9 @@
 }
 :root {
   --content-width: 1200px;
+  color-scheme: only light;
 }
+
 .hero-layout,
 .process-list,
 .process-detail,
@@ -888,4 +890,5 @@ input {
     font-size: 15px;
   }
 }
+
 }
