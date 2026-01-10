@@ -117,18 +117,43 @@ button:hover {
   opacity: 0.9;
 }
 
+/* Secondary CTA – Besichtigung vereinbaren */
 .visit-btn {
   display: block;
-  margin: 28px auto;
-  padding: 16px 110px;          /* ⬅️ BIGGER */
-  border: 1px solid rgb(101, 89, 89);   /* ⬅️ STRONGER BORDER */
-  border-radius: 8px;         /* ⬅️ MODERN ROUNDING */
-  text-decoration: none;
-  font-weight: 600;
+  width: 100%;
+  margin: 20px auto 0;
+
+  padding: 18px 28px;
+  background: transparent;
+
+  color: #111;                     /* readable in light + forced dark */
+  border: 2px solid #9ca3af;        /* neutral grey */
+  border-radius: 8px;
+
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
   cursor: pointer;
   transition: all 0.25s ease;
 }
+
+/* Hover / focus */
+.visit-btn:hover,
+.visit-btn:focus-visible {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Mobile spacing polish */
+@media (max-width: 768px) {
+  .visit-btn {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+}
+
 
 
 /* =====================
