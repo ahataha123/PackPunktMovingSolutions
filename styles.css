@@ -2,6 +2,19 @@
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
+:root {
+  --content-width: 1200px;
+}
+.hero-layout,
+.process-list,
+.process-detail,
+.cta-inner,
+.reviews-inner,
+.footer-inner {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* FORCE LIGHT MODE – DISABLE SYSTEM DARK MODE */
 :root {
@@ -759,5 +772,61 @@ input {
   color: #111111 !important;
   border: 1px solid #ddd !important;
 }
+
+/* =====================
+   TOP HEADER ADJUSTMENT
+===================== */
+
+/* Make the top logo smaller */
+.nav .brand-logo {
+  height:50px;          /* about half */
+  width: auto;
+}
+
+/* Give header breathing room */
+.nav {
+  height: auto;          /* remove hard 100px feeling */
+  padding: 5px 0 5px;
+  align-items: center;
+}
+
+.brand-text {
+  font-size: 14px;        /* smaller */  /* italic */
+  line-height: 1.4;
+  color: #333;
+  max-width: 420px;      /* prevents long ugly lines */
+}
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: 13px;
+  }
+}
+/* === DIVIDER BETWEEN HEADER AND HERO IMAGE === */
+.hero-middle-wrapper {
+  position: relative;
+  padding-top: 32px; /* space between line and image */
+}
+
+.hero-middle-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000; /* change to turquoise if needed */
+}
+@media (max-width: 768px) {
+  .hero-middle-wrapper {
+    padding-top: 15px;
+  }
+
+  .hero-middle-wrapper::before {
+    top: -10px;
+    height: 1.5px;
+  }
+}
+
+
 
 }
