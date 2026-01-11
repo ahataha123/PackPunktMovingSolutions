@@ -732,7 +732,7 @@ button:hover {
   @media (max-width: 900px) {
   .hero-layout {
     grid-template-columns: 1fr;
-    gap: 1px;
+    gap: 0px;
   }
 
   .hero-content {

@@ -74,7 +74,7 @@ setInterval(() => {
   slides[currentSlide].classList.add("active");
 }, 2500); // change every 3.5s
 
-
+/*
 (function () {
   const wrapper = document.getElementById("heroMiddle");
   const img = document.getElementById("heroMiddleImg");
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Listen for changes (rotate, resize, split screen)
   mq.addEventListener("change", updateHeroMiddle);
 });
-
+ */
 
 
 
